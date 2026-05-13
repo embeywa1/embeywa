@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Linkedin, Github, Phone, MessageCircle, Award, Download, ArrowDown } from "lucide-react";
 import profileImg from "@/assets/mildred-profile.jpeg";
@@ -10,6 +10,16 @@ const HeroSection = () => {
   const [roleIndex, setRoleIndex] = useState(0);
   const [text, setText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
+
+  const heroRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ["start start", "end start"],
+  });
+  const blobY1 = useTransform(scrollYProgress, [0, 1], [0, 200]);
+  const blobY2 = useTransform(scrollYProgress, [0, 1], [0, -150]);
+  const contentY = useTransform(scrollYProgress, [0, 1], [0, 120]);
+  const contentOpacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
   useEffect(() => {
     const currentRole = roles[roleIndex];
@@ -38,13 +48,13 @@ const HeroSection = () => {
   }, [text, isDeleting, roleIndex]);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background effects */}
+    <section ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background effects with parallax */}
       <div className="absolute inset-0 scanline pointer-events-none" />
-      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-secondary/5 rounded-full blur-3xl" />
+      <motion.div style={{ y: blobY1 }} className="absolute top-1/4 -left-32 w-96 h-96 bg-primary/5 rounded-full blur-3xl will-change-transform" />
+      <motion.div style={{ y: blobY2 }} className="absolute bottom-1/4 -right-32 w-96 h-96 bg-secondary/5 rounded-full blur-3xl will-change-transform" />
 
-      <div className="container mx-auto px-4 pt-20">
+      <motion.div style={{ y: contentY, opacity: contentOpacity }} className="container mx-auto px-4 pt-20">
         <div className="flex flex-col items-center text-center gap-8">
           {/* Profile image */}
           <motion.div
@@ -140,7 +150,7 @@ const HeroSection = () => {
             ))}
           </motion.div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
