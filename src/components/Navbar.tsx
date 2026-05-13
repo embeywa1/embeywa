@@ -73,6 +73,12 @@ const Navbar = () => {
           ))}
         </div>
       )}
+
+      {/* Scroll progress bar */}
+      <motion.div
+        style={{ scaleX }}
+        className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary via-primary to-secondary origin-left"
+      />
     </nav>
   );
 };
