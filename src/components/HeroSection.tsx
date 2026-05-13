@@ -11,6 +11,16 @@ const HeroSection = () => {
   const [text, setText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
 
+  const heroRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ["start start", "end start"],
+  });
+  const blobY1 = useTransform(scrollYProgress, [0, 1], [0, 200]);
+  const blobY2 = useTransform(scrollYProgress, [0, 1], [0, -150]);
+  const contentY = useTransform(scrollYProgress, [0, 1], [0, 120]);
+  const contentOpacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
+
   useEffect(() => {
     const currentRole = roles[roleIndex];
     const speed = isDeleting ? 40 : 80;
