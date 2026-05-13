@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Linkedin, Github, Phone, MessageCircle, Award, Download, ArrowDown } from "lucide-react";
 import profileImg from "@/assets/mildred-profile.jpeg";
