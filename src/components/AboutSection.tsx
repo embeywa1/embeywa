@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import profileImg from "@/assets/mildred-profile.jpeg";
+import SkillsMarquee from "./SkillsMarquee";
 
 const AboutSection = () => (
   <section id="about" className="py-24 relative">
