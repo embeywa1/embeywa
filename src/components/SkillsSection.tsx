@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Cloud, Bitcoin, Code, Server, Wrench } from "lucide-react";
 
-const skillCategories = [
+export const skillCategories = [
   {
     icon: Cloud,
     title: "Cloud",
