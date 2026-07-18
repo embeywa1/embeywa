@@ -1,3 +1,4 @@
+import { AnimatePresence, motion } from "framer-motion";
 import { useLocalClock } from "@/hooks/useLocalClock";
 
 const CRTClock = () => {
@@ -18,11 +19,20 @@ const CRTClock = () => {
       <div className="absolute bottom-0 left-0 w-1.5 h-1.5 border-b border-l border-primary/80" />
       <div className="absolute bottom-0 right-0 w-1.5 h-1.5 border-b border-r border-primary/80" />
 
-      <div className="relative z-10 flex flex-col leading-tight">
-        <span className="text-primary font-semibold [text-shadow:0_0_8px_hsl(193_100%_50%/_0.6)] transition-all duration-300">
-          {time}
-        </span>
-        <span className="text-muted-foreground transition-all duration-300">{date}</span>
+      <div className="relative z-10 flex flex-col leading-tight w-[116px] tabular-nums">
+        <AnimatePresence mode="popLayout">
+          <motion.span
+            key={time}
+            initial={{ opacity: 0, y: 3, filter: "blur(2px)" }}
+            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            exit={{ opacity: 0, y: -3, filter: "blur(2px)" }}
+            transition={{ duration: 0.35, ease: "easeOut" }}
+            className="text-primary font-semibold [text-shadow:0_0_10px_hsl(193_100%_50%/_0.7)]"
+          >
+            {time}
+          </motion.span>
+        </AnimatePresence>
+        <span className="text-muted-foreground transition-colors duration-300">{date}</span>
       </div>
 
       {/* Blinking live indicator */}
