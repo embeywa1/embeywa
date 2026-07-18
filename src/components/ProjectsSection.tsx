@@ -105,6 +105,27 @@ const ProjectsSection = () => (
             </motion.div>
           ))}
         </div>
+
+        {/* CTA Banner */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="w-full border border-border rounded-lg bg-card p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6"
+        >
+          <div className="space-y-1 text-center md:text-left">
+            <p className="text-xs uppercase tracking-[0.3em] text-primary">{"// more_projects"}</p>
+            <h3 className="font-display font-semibold text-lg text-foreground">
+              Want to see more of my open-source development and repositories?
+            </h3>
+          </div>
+          <Button variant="cyber" asChild>
+            <a href="https://github.com/embeywa1" target="_blank" rel="noopener noreferrer">
+              <ExternalLink size={16} /> View All Projects on GitHub
+            </a>
+          </Button>
+        </motion.div>
       </motion.div>
     </div>
   </section>
