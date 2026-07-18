@@ -30,15 +30,8 @@ const AboutSection = () => (
             I am passionate about contributing to the Bitcoin open-source ecosystem and leveraging
             a problem-solving mindset to drive impactful, secure digital solutions.
           </p>
-          <div className="flex flex-wrap gap-3 pt-2">
-            {["React", "TypeScript", "AWS", "Bitcoin", "Python", "Linux"].map((tag) => (
-              <span
-                key={tag}
-                className="px-3 py-1 text-xs rounded-full border border-primary/30 text-primary bg-primary/5"
-              >
-                {tag}
-              </span>
-            ))}
+          <div className="pt-2 -mx-2">
+            <SkillsMarquee />
           </div>
         </div>
 
