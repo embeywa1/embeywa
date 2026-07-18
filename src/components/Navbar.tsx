@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import LocalClock from "./LocalClock";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -44,6 +45,7 @@ const Navbar = () => {
               {l.label}
             </a>
           ))}
+          <LocalClock />
         </div>
 
         {/* Mobile toggle */}
