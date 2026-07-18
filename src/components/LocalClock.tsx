@@ -19,7 +19,7 @@ const CRTClock = () => {
       <div className="absolute bottom-0 left-0 w-1.5 h-1.5 border-b border-l border-primary/80" />
       <div className="absolute bottom-0 right-0 w-1.5 h-1.5 border-b border-r border-primary/80" />
 
-      <div className="relative z-10 flex flex-col leading-tight w-[116px] tabular-nums">
+      <div className="relative z-10 flex flex-col leading-tight min-w-[140px] tabular-nums">
         <AnimatePresence mode="popLayout">
           <motion.span
             key={time}
