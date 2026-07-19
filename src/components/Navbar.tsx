@@ -34,27 +34,30 @@ const Navbar = () => {
           {"<ME />"}
         </a>
 
-        {/* Desktop */}
-        <div className="hidden lg:flex items-center gap-6">
-          {navLinks.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              className="text-xs uppercase tracking-widest text-muted-foreground hover:text-primary transition-colors"
-            >
-              {l.label}
-            </a>
-          ))}
-          <LocalClock />
-        </div>
+        <div className="flex items-center gap-3 md:gap-6">
+          {/* Desktop nav links */}
+          <div className="hidden lg:flex items-center gap-6">
+            {navLinks.map((l) => (
+              <a
+                key={l.href}
+                href={l.href}
+                className="text-xs uppercase tracking-widest text-muted-foreground hover:text-primary transition-colors"
+              >
+                {l.label}
+              </a>
+            ))}
+          </div>
 
-        {/* Mobile toggle */}
-        <button
-          className="lg:hidden text-foreground"
-          onClick={() => setMobileOpen(!mobileOpen)}
-        >
-          {mobileOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+          <LocalClock />
+
+          {/* Mobile toggle */}
+          <button
+            className="lg:hidden text-foreground"
+            onClick={() => setMobileOpen(!mobileOpen)}
+          >
+            {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile menu */}
