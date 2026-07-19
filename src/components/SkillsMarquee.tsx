@@ -11,9 +11,9 @@ const pillars = [
   {
     name: "Bitcoin",
     Icon: Bitcoin,
-    textColor: "text-orange-400",
-    hoverColor: "hover:border-orange-400",
-    glow: "hover:shadow-[0_0_12px_rgba(251,146,60,0.35)]",
+    textColor: "text-amber-500",
+    hoverColor: "hover:border-amber-500",
+    glow: "hover:shadow-[0_0_12px_rgba(245,158,11,0.35)]",
   },
   {
     name: "Cloud Infrastructure",
