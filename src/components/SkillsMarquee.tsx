@@ -40,7 +40,7 @@ const SkillsMarquee = () => (
     {pillars.map((item) => (
       <span
         key={item.name}
-        className={`inline-flex items-center gap-2 whitespace-nowrap rounded border border-border bg-muted px-2 py-1 text-xs font-mono ${item.textColor} shadow-sm transition-all duration-300 ${item.hoverColor} ${item.glow}`}
+        className={`inline-flex items-center gap-2 whitespace-nowrap rounded border ${item.borderColor} bg-muted px-2 py-1 text-xs font-mono ${item.textColor} shadow-sm transition-all duration-300 ${item.hoverColor} ${item.glow}`}
       >
         <item.Icon className={`h-4 w-4 ${item.textColor}`} />
         {item.name}
