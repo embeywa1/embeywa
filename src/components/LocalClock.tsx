@@ -32,7 +32,7 @@ const CRTClock = () => {
             {time}
           </motion.span>
         </AnimatePresence>
-        <span className="text-muted-foreground transition-colors duration-300 hidden md:inline">{date}</span>
+        <span className="text-muted-foreground transition-colors duration-300">{date}</span>
       </div>
 
       {/* Blinking live indicator */}
