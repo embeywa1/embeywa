@@ -5,6 +5,7 @@ const pillars = [
     name: "Programming",
     Icon: Code2,
     textColor: "text-cyan-400",
+    borderColor: "border-cyan-400/30",
     hoverColor: "hover:border-cyan-400",
     glow: "hover:shadow-[0_0_12px_rgba(34,211,238,0.35)]",
   },
@@ -12,6 +13,7 @@ const pillars = [
     name: "Bitcoin",
     Icon: Bitcoin,
     textColor: "text-amber-500",
+    borderColor: "border-amber-500/30",
     hoverColor: "hover:border-amber-500",
     glow: "hover:shadow-[0_0_12px_rgba(245,158,11,0.35)]",
   },
@@ -19,6 +21,7 @@ const pillars = [
     name: "Cloud Infrastructure",
     Icon: Cloud,
     textColor: "text-sky-300",
+    borderColor: "border-sky-300/30",
     hoverColor: "hover:border-sky-300",
     glow: "hover:shadow-[0_0_12px_rgba(125,211,252,0.35)]",
   },
@@ -26,6 +29,7 @@ const pillars = [
     name: "Systems & Networking",
     Icon: Network,
     textColor: "text-amber-500",
+    borderColor: "border-amber-500/30",
     hoverColor: "hover:border-amber-500",
     glow: "hover:shadow-[0_0_12px_rgba(245,158,11,0.35)]",
   },
@@ -36,7 +40,7 @@ const SkillsMarquee = () => (
     {pillars.map((item) => (
       <span
         key={item.name}
-        className={`inline-flex items-center gap-2 whitespace-nowrap rounded border border-border bg-muted px-2 py-1 text-xs font-mono ${item.textColor} shadow-sm transition-all duration-300 ${item.hoverColor} ${item.glow}`}
+        className={`inline-flex items-center gap-2 whitespace-nowrap rounded border ${item.borderColor} bg-muted px-2 py-1 text-xs font-mono ${item.textColor} shadow-sm transition-all duration-300 ${item.hoverColor} ${item.glow}`}
       >
         <item.Icon className={`h-4 w-4 ${item.textColor}`} />
         {item.name}
