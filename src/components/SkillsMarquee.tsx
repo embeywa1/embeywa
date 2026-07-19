@@ -1,20 +1,44 @@
-import { Code2, Coins, Cloud, Network } from "lucide-react";
+import { Code2, Bitcoin, Cloud, Network } from "lucide-react";
 
 const pillars = [
-  { name: "Programming", Icon: Code2 },
-  { name: "Bitcoin Development", Icon: Coins },
-  { name: "Cloud Infrastructure", Icon: Cloud },
-  { name: "Systems & Networking", Icon: Network },
+  {
+    name: "Programming",
+    Icon: Code2,
+    textColor: "text-cyan-400",
+    hoverColor: "hover:border-cyan-400",
+    glow: "hover:shadow-[0_0_12px_rgba(34,211,238,0.35)]",
+  },
+  {
+    name: "Bitcoin",
+    Icon: Bitcoin,
+    textColor: "text-orange-400",
+    hoverColor: "hover:border-orange-400",
+    glow: "hover:shadow-[0_0_12px_rgba(251,146,60,0.35)]",
+  },
+  {
+    name: "Cloud Infrastructure",
+    Icon: Cloud,
+    textColor: "text-sky-300",
+    hoverColor: "hover:border-sky-300",
+    glow: "hover:shadow-[0_0_12px_rgba(125,211,252,0.35)]",
+  },
+  {
+    name: "Systems & Networking",
+    Icon: Network,
+    textColor: "text-amber-500",
+    hoverColor: "hover:border-amber-500",
+    glow: "hover:shadow-[0_0_12px_rgba(245,158,11,0.35)]",
+  },
 ];
 
 const SkillsMarquee = () => (
-  <div className="flex flex-wrap gap-3 py-2">
+  <div className="flex flex-wrap gap-2 py-2">
     {pillars.map((item) => (
       <span
         key={item.name}
-        className="inline-flex items-center gap-2 whitespace-nowrap rounded-md border border-border bg-card/70 px-3 py-1.5 text-xs font-mono text-cyan-400 shadow-sm backdrop-blur-sm transition-all duration-300 hover:border-cyan-400 hover:shadow-[0_0_12px_rgba(34,211,238,0.3)]"
+        className={`inline-flex items-center gap-2 whitespace-nowrap rounded border border-border bg-muted px-2 py-1 text-xs font-mono ${item.textColor} shadow-sm transition-all duration-300 ${item.hoverColor} ${item.glow}`}
       >
-        <item.Icon className="h-4 w-4 text-cyan-400" />
+        <item.Icon className={`h-4 w-4 ${item.textColor}`} />
         {item.name}
       </span>
     ))}
@@ -22,5 +46,6 @@ const SkillsMarquee = () => (
 );
 
 export default SkillsMarquee;
+
 
 
