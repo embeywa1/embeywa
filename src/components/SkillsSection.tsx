@@ -6,7 +6,7 @@ export const skillCategories = [
     icon: Cloud,
     title: "Cloud",
     color: "text-primary",
-    skills: ["AWS Fundamentals", "EC2 Deployment", "S3 Storage", "IAM"],
+    skills: ["AWS Fundamentals", "EC2 Deployment", "S3 Storage", "IAM", "Firebase", "Firestore", "Auth"],
   },
   {
     icon: Bitcoin,
@@ -21,7 +21,7 @@ export const skillCategories = [
     skills: [
       "Python", "PHP", "Laravel", "C#", "C++", "JavaScript", "React",
       "TypeScript", "Node.js", "MySQL", "REST APIs", "Tailwind CSS",
-      "CSS", "Visual Basic",
+      "CSS", "Visual Basic", "Java", "Rust", "Next.js", "Express.js", "AI APIs",
     ],
   },
   {
@@ -30,14 +30,14 @@ export const skillCategories = [
     color: "text-secondary",
     skills: [
       "Linux (Kali, Ubuntu)", "Cisco Networking", "TCP/IP", "DNS",
-      "DHCP", "Hardware Troubleshooting",
+      "DHCP", "Hardware Troubleshooting", "Kubernetes",
     ],
   },
   {
     icon: Wrench,
     title: "Tools",
     color: "text-primary",
-    skills: ["Git/GitHub", "Docker", "Linux (Kali/Ubuntu)", "Cisco Networking"],
+    skills: ["Git/GitHub", "Docker", "Linux (Kali/Ubuntu)", "Cisco Networking", "MongoDB", "DevOps"],
   },
 ];
 
