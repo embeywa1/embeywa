@@ -5,7 +5,7 @@ const CRTClock = () => {
   const { time, date } = useLocalClock();
 
   return (
-    <div className="relative flex items-center gap-2 px-2 py-1.5 md:px-3 md:py-2 rounded-lg border border-primary/40 bg-background/80 backdrop-blur-sm font-mono text-[10px] md:text-xs tracking-widest overflow-hidden group hover:border-primary/60 transition-colors duration-300">
+    <div className="relative flex items-center gap-2 px-2 py-1 sm:px-3 sm:py-1.5 rounded-lg border border-primary/40 bg-background/80 backdrop-blur-sm font-mono text-xs sm:text-sm tracking-widest overflow-hidden group hover:border-primary/60 transition-colors duration-300">
       {/* CRT screen glow */}
       <div className="absolute inset-0 bg-primary/5 pointer-events-none" />
       <div className="absolute inset-0 rounded-lg shadow-[inset_0_0_20px_hsl(193_100%_50%/_0.1)] pointer-events-none" />
