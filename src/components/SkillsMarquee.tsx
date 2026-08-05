@@ -4,11 +4,11 @@ const pillars = [
   {
     name: "Programming",
     Icon: Code2,
-    textColor: "!text-cyan-400",
-    borderColor: "border-cyan-500/30",
-    bgColor: "bg-cyan-950/20",
-    hoverColor: "hover:!border-cyan-400",
-    glow: "hover:shadow-[0_0_12px_rgba(34,211,238,0.35)]",
+    textColor: "text-primary",
+    borderColor: "border-primary/30",
+    bgColor: "bg-primary/10",
+    hoverColor: "hover:border-primary",
+    glow: "hover:shadow-[0_0_12px_hsl(var(--primary)/0.35)]",
   },
   {
     name: "Bitcoin",
