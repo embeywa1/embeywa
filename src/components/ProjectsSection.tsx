@@ -87,7 +87,12 @@ const ProjectsSection = () => (
               </div>
 
               <div className="p-6 space-y-4">
-                <h3 className="font-display font-semibold text-lg text-foreground">{proj.title}</h3>
+                <div className="space-y-1">
+                  <h3 className="font-display font-semibold text-lg text-foreground">{proj.title}</h3>
+                  {proj.subtitle && (
+                    <p className="text-xs text-muted-foreground leading-tight">{proj.subtitle}</p>
+                  )}
+                </div>
 
                 <div className="space-y-3 text-sm text-muted-foreground">
                   <div>
@@ -112,11 +117,22 @@ const ProjectsSection = () => (
                   ))}
                 </div>
 
-                <Button variant="cyber" size="sm" asChild>
-                  <a href="https://github.com/embeywa1" target="_blank" rel="noopener noreferrer">
-                    <ExternalLink size={14} /> View Code
-                  </a>
-                </Button>
+                <div className="flex flex-wrap gap-3">
+                  {proj.codeUrl && (
+                    <Button variant="cyber" size="sm" asChild>
+                      <a href={proj.codeUrl} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink size={14} /> View Code
+                      </a>
+                    </Button>
+                  )}
+                  {proj.demoUrl && (
+                    <Button variant="cyber" size="sm" asChild>
+                      <a href={proj.demoUrl} target="_blank" rel="noopener noreferrer">
+                        <Globe size={14} /> Live Demo
+                      </a>
+                    </Button>
+                  )}
+                </div>
               </div>
             </motion.div>
           ))}
