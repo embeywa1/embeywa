@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const projects = [
@@ -12,6 +12,7 @@ const projects = [
     impact:
       "Once implemented, it streamlined the administrative workflow, resulting in a 20% increase in operational efficiency.",
     tech: ["PHP", "MySQL"],
+    codeUrl: "https://github.com/embeywa1",
   },
   {
     title: "To-Do List Web Application",
@@ -22,6 +23,7 @@ const projects = [
     impact:
       "By focusing on a user-first design, I created a tool that reduced task completion time by 30% for users.",
     tech: ["React", "JavaScript", "CSS"],
+    codeUrl: "https://github.com/embeywa1",
   },
   {
     title: "Personal Portfolio",
@@ -32,6 +34,20 @@ const projects = [
     impact:
       "This project improved engagement metrics by an estimated 25%, making it much easier to share my work with the global tech community.",
     tech: ["HTML5", "CSS3", "JavaScript"],
+    codeUrl: "https://github.com/embeywa1",
+  },
+  {
+    title: "NetSentinel",
+    subtitle: "Real-Time Network Security & Incident Investigation Interface",
+    vision:
+      "Designed and built NetSentinel as a centralized dashboard to demonstrate real-time network defense concepts, threat analysis, and security event visualization. Built as a direct application of modern frontend architecture applied to high-tech cyber defense tools.",
+    build:
+      "Engineered using modular HTML5, custom CSS3, and modern JavaScript, leveraging high-contrast terminal styling, interactive metrics displays, and a fully responsive layout across all devices.",
+    impact:
+      "Delivers an intuitive interface for monitoring security events and demonstrating modern SOC dashboard workflows, boosting engagement by an estimated 25%.",
+    tech: ["HTML5", "CSS3", "JavaScript", "Cybersecurity", "Network Defense"],
+    codeUrl: "https://github.com/embeywa1",
+    demoUrl: "https://netsentinelbyembeywa.netlify.app/",
   },
 ];
 
@@ -60,7 +76,7 @@ const ProjectsSection = () => (
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.15, duration: 0.5 }}
-              className="border border-border rounded-lg bg-card overflow-hidden group hover:border-primary/40 transition-all duration-300"
+              className="border border-border rounded-lg bg-card overflow-hidden group hover:border-primary/40 hover:shadow-[0_0_25px_hsl(var(--primary)/0.12)] transition-all duration-300"
             >
               {/* Terminal header */}
               <div className="flex items-center gap-2 px-4 py-2 border-b border-border bg-muted/30">
@@ -71,7 +87,12 @@ const ProjectsSection = () => (
               </div>
 
               <div className="p-6 space-y-4">
-                <h3 className="font-display font-semibold text-lg text-foreground">{proj.title}</h3>
+                <div className="space-y-1">
+                  <h3 className="font-display font-semibold text-lg text-foreground">{proj.title}</h3>
+                  {proj.subtitle && (
+                    <p className="text-xs text-muted-foreground leading-tight">{proj.subtitle}</p>
+                  )}
+                </div>
 
                 <div className="space-y-3 text-sm text-muted-foreground">
                   <div>
@@ -96,11 +117,22 @@ const ProjectsSection = () => (
                   ))}
                 </div>
 
-                <Button variant="cyber" size="sm" asChild>
-                  <a href="https://github.com/embeywa1" target="_blank" rel="noopener noreferrer">
-                    <ExternalLink size={14} /> View Code
-                  </a>
-                </Button>
+                <div className="flex flex-wrap gap-3">
+                  {proj.codeUrl && (
+                    <Button variant="cyber" size="sm" asChild>
+                      <a href={proj.codeUrl} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink size={14} /> View Code
+                      </a>
+                    </Button>
+                  )}
+                  {proj.demoUrl && (
+                    <Button variant="cyber" size="sm" asChild>
+                      <a href={proj.demoUrl} target="_blank" rel="noopener noreferrer">
+                        <Globe size={14} /> Live Demo
+                      </a>
+                    </Button>
+                  )}
+                </div>
               </div>
             </motion.div>
           ))}
