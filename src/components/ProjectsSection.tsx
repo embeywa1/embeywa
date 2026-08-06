@@ -12,6 +12,7 @@ const projects = [
     impact:
       "Once implemented, it streamlined the administrative workflow, resulting in a 20% increase in operational efficiency.",
     tech: ["PHP", "MySQL"],
+    codeUrl: "https://github.com/embeywa1",
   },
   {
     title: "To-Do List Web Application",
@@ -22,6 +23,7 @@ const projects = [
     impact:
       "By focusing on a user-first design, I created a tool that reduced task completion time by 30% for users.",
     tech: ["React", "JavaScript", "CSS"],
+    codeUrl: "https://github.com/embeywa1",
   },
   {
     title: "Personal Portfolio",
@@ -32,6 +34,20 @@ const projects = [
     impact:
       "This project improved engagement metrics by an estimated 25%, making it much easier to share my work with the global tech community.",
     tech: ["HTML5", "CSS3", "JavaScript"],
+    codeUrl: "https://github.com/embeywa1",
+  },
+  {
+    title: "NetSentinel",
+    subtitle: "Real-Time Network Security & Incident Investigation Interface",
+    vision:
+      "Designed and built NetSentinel as a centralized dashboard to demonstrate real-time network defense concepts, threat analysis, and security event visualization. Built as a direct application of modern frontend architecture applied to high-tech cyber defense tools.",
+    build:
+      "Engineered using modular HTML5, custom CSS3, and modern JavaScript, leveraging high-contrast terminal styling, interactive metrics displays, and a fully responsive layout across all devices.",
+    impact:
+      "Delivers an intuitive interface for monitoring security events and demonstrating modern SOC dashboard workflows, boosting engagement by an estimated 25%.",
+    tech: ["HTML5", "CSS3", "JavaScript", "Cybersecurity", "Network Defense"],
+    codeUrl: "https://github.com/embeywa1",
+    demoUrl: "https://netsentinelbyembeywa.netlify.app/",
   },
 ];
 
