@@ -76,7 +76,7 @@ const ProjectsSection = () => (
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.15, duration: 0.5 }}
-              className="border border-border rounded-lg bg-card overflow-hidden group hover:border-primary/40 transition-all duration-300"
+              className="border border-border rounded-lg bg-card overflow-hidden group hover:border-primary/40 hover:shadow-[0_0_25px_hsl(var(--primary)/0.12)] transition-all duration-300"
             >
               {/* Terminal header */}
               <div className="flex items-center gap-2 px-4 py-2 border-b border-border bg-muted/30">
