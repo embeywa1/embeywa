@@ -4,15 +4,17 @@ import { Button } from "@/components/ui/button";
 
 const projects = [
   {
-    title: "Web-Based Attendance System",
+    title: "AttendX",
+    subtitle: "Role-Based Academic Attendance & Telemetry Platform",
     vision:
-      "For my final year project at Matili Technical Training Institute, I wanted to tackle the inefficiency of manual record-keeping. I saw how paper logs were easily lost and difficult to audit, so I built a digital solution to automate the process.",
+      "Replaces paper roll calls and fragmented spreadsheets with synchronized real-time attendance telemetry, self-service course enrollment, and transparent student tracking.",
     build:
-      "I used PHP for the backend logic and MySQL for the database. This was a critical project because it required designing a relational database that could handle high-frequency data entry while maintaining integrity.",
+      "Built on React (Vite) and Supabase (PostgreSQL). Features custom PL/pgSQL functions (is_faculty()), strict Row-Level Security (RLS) policies, automated signup triggers (on_auth_user_created), dynamic batch-upsert roster matrices, and modular service abstractions (classApi, attendanceApi).",
     impact:
-      "Once implemented, it streamlined the administrative workflow, resulting in a 20% increase in operational efficiency.",
-    tech: ["PHP", "MySQL"],
+      "Streamlines faculty session workflows, provides real-time attendance rate tracking for students, and enforces strict multi-tenant data privacy at the database layer.",
+    tech: ["React (Vite)", "Supabase", "PostgreSQL", "Tailwind CSS", "Row Level Security", "Shadcn UI"],
     codeUrl: "https://github.com/embeywa1",
+    demoUrl: "https://webattendx.lovable.app",
   },
   {
     title: "To-Do List Web Application",
