@@ -156,7 +156,7 @@ const ProjectsSection = () => (
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="w-full border border-border rounded-lg bg-card p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6"
+          className="w-full border border-border rounded-lg bg-card p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 hover:border-primary/40 focus-within:border-primary/40 hover:shadow-[0_0_25px_hsl(var(--primary)/0.12)] focus-within:shadow-[0_0_25px_hsl(var(--primary)/0.12)] transition-all duration-300"
         >
           <div className="space-y-1 text-center md:text-left">
             <p className="text-xs uppercase tracking-[0.3em] text-primary">{"// more_projects"}</p>
