@@ -13,7 +13,6 @@ const projects = [
     impact:
       "Streamlines faculty session workflows, provides real-time attendance rate tracking for students, and enforces strict multi-tenant data privacy at the database layer.",
     tech: ["React (Vite)", "Supabase", "PostgreSQL", "Tailwind CSS", "Row Level Security", "Shadcn UI"],
-    demoLabel: "View Live Deployment",
     codeUrl: "https://github.com/embeywa1",
     demoUrl: "https://webattendx.lovable.app",
   },
