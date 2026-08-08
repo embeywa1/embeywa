@@ -12,7 +12,7 @@ const projects = [
       "Built on React (Vite) and Supabase (PostgreSQL). Features custom PL/pgSQL functions (is_faculty()), strict Row-Level Security (RLS) policies, automated signup triggers (on_auth_user_created), dynamic batch-upsert roster matrices, and modular service abstractions (classApi, attendanceApi).",
     impact:
       "Streamlines faculty session workflows, provides real-time attendance rate tracking for students, and enforces strict multi-tenant data privacy at the database layer.",
-    tech: ["React (Vite)", "Supabase", "PostgreSQL", "Tailwind CSS", "Row Level Security", "Shadcn UI"],
+    demoLabel: "View Live Deployment",
     codeUrl: "https://github.com/embeywa1",
     demoUrl: "https://webattendx.lovable.app",
   },
