@@ -78,7 +78,17 @@ const ProjectsSection = () => (
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.15, duration: 0.5 }}
-              className="border border-border rounded-lg bg-card overflow-hidden group hover:border-primary/40 hover:shadow-[0_0_25px_hsl(var(--primary)/0.12)] transition-all duration-300"
+              tabIndex={0}
+              role="article"
+              aria-label={`${proj.title} project card`}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  const firstLink = e.currentTarget.querySelector("a") as HTMLElement | null;
+                  firstLink?.focus();
+                }
+              }}
+              className="border border-border rounded-lg bg-card overflow-hidden group hover:border-primary/40 focus-within:border-primary/40 focus-visible:border-primary/40 hover:shadow-[0_0_25px_hsl(var(--primary)/0.12)] focus-within:shadow-[0_0_25px_hsl(var(--primary)/0.12)] focus-visible:shadow-[0_0_25px_hsl(var(--primary)/0.12)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 transition-all duration-300"
             >
               {/* Terminal header */}
               <div className="flex items-center gap-2 px-4 py-2 border-b border-border bg-muted/30">
