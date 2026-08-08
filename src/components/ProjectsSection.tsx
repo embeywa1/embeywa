@@ -13,7 +13,6 @@ const projects = [
     impact:
       "Streamlines faculty session workflows, provides real-time attendance rate tracking for students, and enforces strict multi-tenant data privacy at the database layer.",
     tech: ["React (Vite)", "Supabase", "PostgreSQL", "Tailwind CSS", "Row Level Security", "Shadcn UI"],
-    demoLabel: "View Live Deployment",
     codeUrl: "https://github.com/embeywa1",
     demoUrl: "https://webattendx.lovable.app",
   },
@@ -131,7 +130,7 @@ const ProjectsSection = () => (
                   {proj.demoUrl && (
                     <Button variant="cyber" size="sm" asChild>
                       <a href={proj.demoUrl} target="_blank" rel="noopener noreferrer">
-                        <Globe size={14} /> {proj.demoLabel || "Live Demo"}
+                        <Globe size={14} /> Live Demo
                       </a>
                     </Button>
                   )}
