@@ -130,7 +130,7 @@ const ProjectsSection = () => (
                   {proj.demoUrl && (
                     <Button variant="cyber" size="sm" asChild>
                       <a href={proj.demoUrl} target="_blank" rel="noopener noreferrer">
-                        <Globe size={14} /> {proj.demoLabel || "Live Demo"}
+                        <Globe size={14} /> Live Demo
                       </a>
                     </Button>
                   )}
