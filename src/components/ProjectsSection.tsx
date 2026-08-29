@@ -17,28 +17,6 @@ const projects = [
     demoUrl: "https://webattendx.lovable.app",
   },
   {
-    title: "To-Do List Web Application",
-    vision:
-      "During my internship at Coding Samurai, I was tasked with creating a tool to help users manage their productivity. I wanted to build something that felt fast and modern.",
-    build:
-      "Although I started with standard HTML and CSS, I leveled up the project by building the final version using JavaScript frameworks like React, implementing real-time state management.",
-    impact:
-      "By focusing on a user-first design, I created a tool that reduced task completion time by 30% for users.",
-    tech: ["React", "JavaScript", "CSS"],
-    codeUrl: "https://github.com/embeywa1",
-  },
-  {
-    title: "Personal Portfolio",
-    vision:
-      "I needed a central hub to showcase my journey—from my diploma to my current degree and my shift into Bitcoin and AWS. I treated my portfolio as a live demonstration of my frontend skills.",
-    build:
-      "I used the latest frontend technologies (HTML5, CSS3, and JavaScript) with heavy emphasis on responsive design for seamless experience across all devices.",
-    impact:
-      "This project improved engagement metrics by an estimated 25%, making it much easier to share my work with the global tech community.",
-    tech: ["HTML5", "CSS3", "JavaScript"],
-    codeUrl: "https://github.com/embeywa1",
-  },
-  {
     title: "NetSentinel",
     subtitle: "Real-Time Network Security & Incident Investigation Interface",
     vision:
