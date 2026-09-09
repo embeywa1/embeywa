@@ -107,8 +107,12 @@ const HeroSection = () => {
               </a>
             </Button>
             <Button variant="cyber-orange" size="lg" asChild>
-              <a href="/CV_-_Mildred_Embeywa.pdf" download>
-                <Download size={16} /> Download CV
+              <a
+                href="https://docs.google.com/document/d/1cqqer5gHHyhcVdGVxchdir4L-W7Ae_YikX5TnkC4YGg/edit?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Download size={16} /> View CV
               </a>
             </Button>
           </motion.div>
