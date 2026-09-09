@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Download } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import LocalClock from "./LocalClock";
 
 const navLinks = [
@@ -50,10 +51,22 @@ const Navbar = () => {
 
           <LocalClock />
 
+          <Button variant="cyber" size="sm" asChild className="hidden md:inline-flex">
+            <a
+              href="https://docs.google.com/document/d/1cqqer5gHHyhcVdGVxchdir4L-W7Ae_YikX5TnkC4YGg/edit?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Download size={16} /> View CV
+            </a>
+          </Button>
+
           {/* Mobile toggle */}
           <button
             className="lg:hidden text-foreground"
             onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label={mobileOpen ? "Close menu" : "Open menu"}
+            aria-expanded={mobileOpen}
           >
             {mobileOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -73,6 +86,15 @@ const Navbar = () => {
               {l.label}
             </a>
           ))}
+          <a
+            href="https://docs.google.com/document/d/1cqqer5gHHyhcVdGVxchdir4L-W7Ae_YikX5TnkC4YGg/edit?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setMobileOpen(false)}
+            className="block px-6 py-3 text-sm text-primary hover:text-primary/80 transition-colors"
+          >
+            View CV
+          </a>
         </div>
       )}
     </nav>

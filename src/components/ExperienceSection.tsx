@@ -1,7 +1,19 @@
 import { motion } from "framer-motion";
-import { Briefcase } from "lucide-react";
+import { Briefcase, Zap } from "lucide-react";
 
 const experiences = [
+  {
+    company: "Finlanza",
+    role: "Associate System Engineer",
+    period: "May 2026 – Present",
+    status: "Active",
+    points: [
+      "Configured and customized enterprise Zoho applications (CRM, Books, Creator, Projects, Vertical Studio) to architect tailored client business systems.",
+      "Engineered custom automation workflows and Deluge scripts to automate core business processes.",
+      "Diagnosed and resolved critical system configuration issues, API integration gaps, and workflow errors across client environments.",
+      "Contributed to the development and deployment of Finlanza's vertical SaaS products.",
+    ],
+  },
   {
     company: "Kenya Tulia Safari Holiday Arcade Limited",
     role: "Accountant, Data Entry & IT Support",
@@ -65,7 +77,7 @@ const impactCounters = [
   { value: "30%", label: "Load Time Reduced" },
   { value: "25%", label: "User Engagement Up" },
   { value: "50+", label: "Daily Clients Served" },
-  { value: "6+", label: "Professional Roles" },
+  { value: "7+", label: "Professional Roles" },
 ];
 
 const ExperienceSection = () => (
@@ -114,13 +126,21 @@ const ExperienceSection = () => (
               className="border border-border rounded-lg p-6 bg-card hover:border-primary/30 transition-colors"
             >
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center shrink-0">
-                  <Briefcase size={18} className="text-secondary" />
+                <div className={`w-10 h-10 rounded-lg flex items-center justify-center shrink-0 ${exp.status ? "bg-primary/10" : "bg-secondary/10"}`}>
+                  {exp.status ? <Zap size={18} className="text-primary" /> : <Briefcase size={18} className="text-secondary" />}
                 </div>
                 <div className="flex-1">
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-1">
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
                     <div>
-                      <h3 className="font-display font-semibold text-foreground">{exp.company}</h3>
+                      <div className="flex items-center gap-2 flex-wrap">
+                        <h3 className="font-display font-semibold text-foreground">{exp.company}</h3>
+                        {exp.status && (
+                          <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-primary/10 text-primary border border-primary/40 shadow-[0_0_10px_hsl(193_100%_50%/0.25)]">
+                            <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
+                            {exp.status}
+                          </span>
+                        )}
+                      </div>
                       <p className="text-sm text-primary">{exp.role}</p>
                     </div>
                     <span className="text-xs text-muted-foreground shrink-0">{exp.period}</span>
