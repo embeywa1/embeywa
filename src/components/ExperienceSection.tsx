@@ -3,6 +3,18 @@ import { Briefcase, Zap } from "lucide-react";
 
 const experiences = [
   {
+    company: "Finlanza",
+    role: "Associate System Engineer",
+    period: "May 2026 – Present",
+    status: "Active",
+    points: [
+      "Configured and customized enterprise Zoho applications (CRM, Books, Creator, Projects, Vertical Studio) to architect tailored client business systems.",
+      "Engineered custom automation workflows and Deluge scripts to automate core business processes.",
+      "Diagnosed and resolved critical system configuration issues, API integration gaps, and workflow errors across client environments.",
+      "Contributed to the development and deployment of Finlanza's vertical SaaS products.",
+    ],
+  },
+  {
     company: "Kenya Tulia Safari Holiday Arcade Limited",
     role: "Accountant, Data Entry & IT Support",
     period: "Nov 2025 — Jan 2026",

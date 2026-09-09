@@ -51,6 +51,16 @@ const Navbar = () => {
 
           <LocalClock />
 
+          <Button variant="cyber" size="sm" asChild className="hidden md:inline-flex">
+            <a
+              href="https://docs.google.com/document/d/1cqqer5gHHyhcVdGVxchdir4L-W7Ae_YikX5TnkC4YGg/edit?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Download size={16} /> View CV
+            </a>
+          </Button>
+
           {/* Mobile toggle */}
           <button
             className="lg:hidden text-foreground"
