@@ -84,6 +84,15 @@ const Navbar = () => {
               {l.label}
             </a>
           ))}
+          <a
+            href="https://docs.google.com/document/d/1cqqer5gHHyhcVdGVxchdir4L-W7Ae_YikX5TnkC4YGg/edit?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setMobileOpen(false)}
+            className="block px-6 py-3 text-sm text-primary hover:text-primary/80 transition-colors"
+          >
+            View CV
+          </a>
         </div>
       )}
     </nav>
