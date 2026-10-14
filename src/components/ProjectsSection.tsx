@@ -18,6 +18,7 @@ const projects: Project[] = [
   {
     title: "AttendX",
     subtitle: "Role-Based Academic Attendance & Telemetry Platform",
+    status: "Live App",
     vision:
       "Replaces paper roll calls and fragmented spreadsheets with synchronized real-time attendance telemetry, self-service course enrollment, and transparent student tracking.",
     build:
@@ -31,6 +32,7 @@ const projects: Project[] = [
   {
     title: "NetSentinel",
     subtitle: "Real-Time Network Security & Incident Investigation Interface",
+    status: "Live App",
     vision:
       "Designed and built NetSentinel as a centralized dashboard to demonstrate real-time network defense concepts, threat analysis, and security event visualization. Built as a direct application of modern frontend architecture applied to high-tech cyber defense tools.",
     build:
