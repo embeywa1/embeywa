@@ -25,7 +25,7 @@ const projects: Project[] = [
     impact:
       "Streamlines faculty session workflows, provides real-time attendance rate tracking for students, and enforces strict multi-tenant data privacy at the database layer.",
     tech: ["React (Vite)", "Supabase", "PostgreSQL", "Tailwind CSS", "Row Level Security", "Shadcn UI"],
-    codeUrl: "https://github.com/embeywa1",
+    codeUrl: "https://github.com/embeywa1/webattendx",
     demoUrl: "https://webattendx.lovable.app",
   },
   {
@@ -38,7 +38,7 @@ const projects: Project[] = [
     impact:
       "Delivers an intuitive interface for monitoring security events and demonstrating modern SOC dashboard workflows, boosting engagement by an estimated 25%.",
     tech: ["HTML5", "CSS3", "JavaScript", "Cybersecurity", "Network Defense"],
-    codeUrl: "https://github.com/embeywa1",
+    codeUrl: "https://github.com/embeywa1/netsentinel",
     demoUrl: "https://netsentinelbyembeywa.netlify.app/",
   },
   {
@@ -52,7 +52,7 @@ const projects: Project[] = [
     impact:
       "Delivers a zero-network-exposure security utility that generates uncrackable credentials locally in the browser runtime, enforcing zero-trust client-side data privacy.",
     tech: ["React", "Tailwind CSS", "JavaScript", "Web Crypto API", "Cybersecurity", "CSPRNG"],
-    codeUrl: "https://github.com/embeywa1",
+    codeUrl: "https://github.com/embeywa1/ciphervaultbyembeywa",
     demoUrl: "https://ciphervaultbyembeywa.lovable.app",
   },
 ];
