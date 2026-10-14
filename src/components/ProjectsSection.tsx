@@ -2,7 +2,19 @@ import { motion } from "framer-motion";
 import { ExternalLink, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const projects = [
+type Project = {
+  title: string;
+  subtitle?: string;
+  status?: string;
+  vision: string;
+  build: string;
+  impact: string;
+  tech: string[];
+  codeUrl?: string;
+  demoUrl?: string;
+};
+
+const projects: Project[] = [
   {
     title: "AttendX",
     subtitle: "Role-Based Academic Attendance & Telemetry Platform",
@@ -28,6 +40,20 @@ const projects = [
     tech: ["HTML5", "CSS3", "JavaScript", "Cybersecurity", "Network Defense"],
     codeUrl: "https://github.com/embeywa1",
     demoUrl: "https://netsentinelbyembeywa.netlify.app/",
+  },
+  {
+    title: "CIPHERVAULT",
+    subtitle: "High-Entropy Cryptographic Password & Security Utility",
+    status: "Live App",
+    vision:
+      "Designed and built a high-performance, client-side security application to demonstrate cryptographically secure randomness, real-time entropy calculation, and zero-knowledge privacy architecture.",
+    build:
+      "Engineered with React, Tailwind CSS, and Lucide icons. Integrated the native Web Crypto API (window.crypto.getRandomValues) for CSPRNG security, pairing interactive dual-range length controls and custom character set toggles with a live bit-rate entropy meter.",
+    impact:
+      "Delivers a zero-network-exposure security utility that generates uncrackable credentials locally in the browser runtime, enforcing zero-trust client-side data privacy.",
+    tech: ["React", "Tailwind CSS", "JavaScript", "Web Crypto API", "Cybersecurity", "CSPRNG"],
+    codeUrl: "https://github.com/embeywa1",
+    demoUrl: "https://ciphervaultbyembeywa.lovable.app",
   },
 ];
 
@@ -74,6 +100,12 @@ const ProjectsSection = () => (
                 <div className="w-2.5 h-2.5 rounded-full bg-secondary/60" />
                 <div className="w-2.5 h-2.5 rounded-full bg-primary/40" />
                 <span className="text-xs text-muted-foreground ml-2">{proj.title.toLowerCase().replace(/\s+/g, "-")}.tsx</span>
+                {proj.status && (
+                  <span className="ml-auto inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-primary/10 text-primary border border-primary/40 shadow-[0_0_10px_hsl(193_100%_50%/0.25)]">
+                    <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
+                    {proj.status}
+                  </span>
+                )}
               </div>
 
               <div className="p-6 space-y-4">
