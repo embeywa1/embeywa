@@ -4,7 +4,7 @@ import { Briefcase, Zap } from "lucide-react";
 const experiences = [
   {
     company: "Finlanza",
-    role: "Associate System Engineer",
+    role: "Associate Systems Engineer",
     period: "May 2026 – Present",
     status: "Active",
     points: [
