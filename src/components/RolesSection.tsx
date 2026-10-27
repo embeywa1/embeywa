@@ -84,10 +84,9 @@ const RolesSection = () => {
                       role="group"
                       aria-label={`${i + 1} of ${roles.length}: ${role.title}`}
                       tabIndex={0}
-                      className="group rounded-xl border border-border p-6 md:p-10 transition-all duration-300 focus:outline-none focus-visible:border-primary/60"
-                      style={{
-                        backgroundColor: paused && i === index ? "#090D16" : "#090D16",
-                      }}
+                      className="group rounded-xl border border-border transition-all duration-300 focus:outline-none focus-visible:border-primary/60 hover:border-[#00F0FF] hover:shadow-[0_0_24px_rgba(0,240,255,0.25),inset_0_0_18px_rgba(0,240,255,0.06)]"
+                      style={{ backgroundColor: "#090D16" }}
+
                     >
                       {/* Terminal header */}
                       <div className="flex items-center gap-3 mb-6">
