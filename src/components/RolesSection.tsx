@@ -65,7 +65,7 @@ const RolesSection = () => {
           </div>
 
           <div
-            className="relative max-w-3xl mx-auto"
+            className="relative max-w-4xl mx-auto"
             onMouseEnter={() => setPaused(true)}
             onMouseLeave={() => setPaused(false)}
             onFocus={() => setPaused(true)}
@@ -84,39 +84,39 @@ const RolesSection = () => {
                       role="group"
                       aria-label={`${i + 1} of ${roles.length}: ${role.title}`}
                       tabIndex={0}
-                      className="group rounded-xl border border-border transition-all duration-300 focus:outline-none focus-visible:border-primary/60 hover:border-[#00F0FF] hover:shadow-[0_0_24px_rgba(0,240,255,0.25),inset_0_0_18px_rgba(0,240,255,0.06)]"
+                      className="group rounded-xl border border-border p-8 md:p-10 transition-all duration-300 focus:outline-none focus-visible:border-primary/60 hover:border-[#00F0FF] hover:shadow-[0_0_24px_rgba(0,240,255,0.25),inset_0_0_18px_rgba(0,240,255,0.06)]"
                       style={{ backgroundColor: "#090D16" }}
 
                     >
                       {/* Terminal header */}
-                      <div className="flex items-center gap-3 mb-6">
+                      <div className="flex items-center gap-4 mb-7">
                         <div
-                          className="w-10 h-10 rounded-lg flex items-center justify-center shrink-0 border transition-all duration-300 group-hover:shadow-[0_0_18px_rgba(0,240,255,0.35)]"
+                          className="w-14 h-14 rounded-lg flex items-center justify-center shrink-0 border transition-all duration-300 group-hover:shadow-[0_0_18px_rgba(0,240,255,0.35)]"
                           style={{
                             backgroundColor: "rgba(0, 240, 255, 0.08)",
                             borderColor: "rgba(0, 240, 255, 0.4)",
                           }}
                         >
-                          <role.icon size={20} className="text-primary" />
+                          <role.icon size={28} className="text-primary" />
                         </div>
                         <div>
-                          <h3 className="font-display font-semibold text-foreground">
+                          <h3 className="font-display font-bold text-xl md:text-2xl text-foreground">
                             {role.title}
                           </h3>
-                          <p className="text-xs text-muted-foreground font-mono">
+                          <p className="text-sm text-muted-foreground font-mono">
                             {`role_${String(i + 1).padStart(2, "0")}`}
                           </p>
                         </div>
                       </div>
 
                       {/* Points */}
-                      <ul className="space-y-3">
+                      <ul className="space-y-4">
                         {role.points.map((point) => (
                           <li key={point} className="flex items-start gap-3">
-                            <span className="text-primary font-mono text-sm mt-0.5 shrink-0">
+                            <span className="text-primary font-mono text-base mt-1 shrink-0">
                               {">"}
                             </span>
-                            <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                            <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
                               {point}
                             </p>
                           </li>
