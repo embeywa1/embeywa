@@ -4,7 +4,13 @@ import { Button } from "@/components/ui/button";
 import { Linkedin, Github, Phone, MessageCircle, Award, Download, ArrowDown } from "lucide-react";
 import profileImg from "@/assets/mildred-profile.jpeg";
 
-const roles = ["Software Engineer", "Aspiring AWS Cloud Practitioner", "Bitcoin Developer"];
+const roles = [
+  "Full Stack Developer",
+  "Software Engineer",
+  "AWS Cloud Practitioner",
+  "Zoho Developer & Systems Engineer",
+];
+
 
 const HeroSection = () => {
   const [roleIndex, setRoleIndex] = useState(0);
@@ -94,7 +100,22 @@ const HeroSection = () => {
             </span>
           </motion.div>
 
+          {/* Intro paragraph */}
+          <motion.p
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.6, duration: 0.6 }}
+            className="max-w-2xl text-sm md:text-base text-muted-foreground leading-relaxed"
+          >
+            I am a Systems Engineer and Full-Stack Developer specializing in building scalable web
+            applications and transforming manual operations into automated workflows within the
+            Zoho ecosystem. Backed by a cloud infrastructure foundation and diverse operational
+            experience, I bridge the gap between technical architecture and real-world business
+            needs to eliminate tech bottlenecks.
+          </motion.p>
+
           {/* CTA buttons */}
+
           <motion.div
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}

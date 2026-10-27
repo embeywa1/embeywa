@@ -1,7 +1,18 @@
 import { motion } from "framer-motion";
-import { Cloud, Bitcoin, Code, Server, Wrench } from "lucide-react";
+import { Cloud, Bitcoin, Code, Server, Wrench, Workflow } from "lucide-react";
 
 export const skillCategories = [
+  {
+    icon: Workflow,
+    title: "Zoho Ecosystem & Enterprise Automation",
+    color: "text-secondary",
+    skills: [
+      "Zoho CRM", "Zoho Books", "Zoho Creator", "Zoho Projects",
+      "Zoho Vertical Studio", "Deluge scripting", "Workflow automation",
+      "Integration troubleshooting",
+    ],
+  },
+
   {
     icon: Cloud,
     title: "Cloud",

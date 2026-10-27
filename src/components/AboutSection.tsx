@@ -21,15 +21,21 @@ const AboutSection = () => (
             About <span className="text-gradient-cyan">Me</span>
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            I am a versatile Software Engineer and Bitcoin Developer with a strong foundation in
-            building efficient, scalable web applications. Currently, I am advancing my expertise
-            as an aspiring AWS Cloud Practitioner to bridge the gap between robust software
-            development and cloud-native architecture.
+            I am a versatile Systems Engineer and Full-Stack Developer specializing in transforming
+            manual, fragmented business processes into streamlined, automated workflows. Backed by
+            a strong technical foundation and a diverse background spanning software, IT support,
+            sales, and accounting, I bridge the gap between technical architecture and real-world
+            operations. I don't just write code—I deeply understand what a business actually needs
+            to scale.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            I am passionate about contributing to the Bitcoin open-source ecosystem and leveraging
-            a problem-solving mindset to drive impactful, secure digital solutions.
+            I pride myself on being an adaptable, fast learner who translates complex technical
+            concepts into plain language to get problems solved efficiently. Whether I am
+            architecting cloud infrastructure, optimizing business tools, or deploying custom web
+            portals, my goal is always the same: eliminating operational bottlenecks and building
+            secure, scalable systems that last.
           </p>
+
           <div className="pt-2 -mx-2">
             <SkillsMarquee />
           </div>
