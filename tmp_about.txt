@@ -1,0 +1,16 @@
+<div className="space-y-6 text-sm md:text-base leading-relaxed">
+  <p className="text-muted-foreground">
+    I am a versatile Systems Engineer and Full-Stack Developer specializing in transforming
+    manual, fragmented business processes into streamlined, automated workflows. Backed by a
+    strong technical foundation and a diverse background spanning software, IT support, sales,
+    and accounting, I bridge the gap between technical architecture and real-world operations.
+    I don't just write code—I deeply understand what a business actually needs to scale.
+  </p>
+  <p className="text-muted-foreground">
+    I pride myself on being an adaptable, fast learner who translates complex technical concepts
+    into plain language to get problems solved efficiently. Whether I am architecting cloud
+    infrastructure, optimizing business tools, or deploying custom web portals, my goal is
+    always the same: eliminating operational bottlenecks and building secure, scalable systems
+    that last.
+  </p>
+</div>
