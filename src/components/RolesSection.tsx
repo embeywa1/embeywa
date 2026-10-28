@@ -5,7 +5,7 @@ import { Settings2, Code2, CloudCog } from "lucide-react";
 const roles = [
   {
     icon: Settings2,
-    title: "Systems & Zoho Developer",
+    title: "Zoho Developer & Systems Engineer",
     points: [
       "Write advanced Deluge scripts to automate complex business workflows, custom functions, and database triggers.",
       "Turn messy, manual organizational processes into seamless, cloud-connected automation pipelines.",
@@ -22,7 +22,7 @@ const roles = [
   },
   {
     icon: CloudCog,
-    title: "Cloud & Infrastructure Practitioner",
+    title: "Cloud Practitioner",
     points: [
       "Configure and maintain secure cloud infrastructure using core AWS services and management platforms.",
       "Ensure applications are deployed on resilient, well-architected, and cost-optimized environments.",
