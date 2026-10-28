@@ -1,4 +1,4 @@
-import { Code2, Bitcoin, Cloud, Network } from "lucide-react";
+import { Code2, Bitcoin, Cloud, Network, Layers } from "lucide-react";
 
 const pillars = [
   {
@@ -36,6 +36,15 @@ const pillars = [
     bgColor: "bg-muted",
     hoverColor: "hover:border-amber-500",
     glow: "hover:shadow-[0_0_12px_rgba(245,158,11,0.35)]",
+  },
+  {
+    name: "Zoho Ecosystem",
+    Icon: Layers,
+    textColor: "text-primary",
+    borderColor: "border-primary/30",
+    bgColor: "bg-primary/10",
+    hoverColor: "hover:border-primary",
+    glow: "hover:shadow-[0_0_12px_hsl(var(--primary)/0.35)]",
   },
 ];
 
