@@ -22,11 +22,11 @@ const pillars = [
   {
     name: "Cloud Infrastructure",
     Icon: Cloud,
-    textColor: "text-sky-300",
-    borderColor: "border-sky-300/30",
-    bgColor: "bg-muted",
-    hoverColor: "hover:border-sky-300",
-    glow: "hover:shadow-[0_0_12px_rgba(125,211,252,0.35)]",
+    textColor: "text-primary",
+    borderColor: "border-primary/30",
+    bgColor: "bg-primary/10",
+    hoverColor: "hover:border-primary",
+    glow: "hover:shadow-[0_0_12px_hsl(var(--primary)/0.35)]",
   },
   {
     name: "Systems & Networking",
