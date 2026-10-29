@@ -103,13 +103,13 @@ const ProjectsSection = () => (
                 )}
               </div>
 
-              {/* Compact preview thumbnail — full image visible */}
-              <div className="flex items-center justify-center h-40 overflow-hidden border-b border-border group-hover:border-primary/40 transition-colors duration-300 bg-background/60">
+              {/* Preview banner — full-width, reference proportions */}
+              <div className="relative aspect-[16/10] overflow-hidden border-b border-border group-hover:border-primary/40 transition-colors duration-300">
                 <img
                   src={proj.image}
                   alt={`${proj.title} preview`}
                   loading="lazy"
-                  className="object-contain w-full h-full transition-transform duration-500 group-hover:scale-105"
+                  className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
 
