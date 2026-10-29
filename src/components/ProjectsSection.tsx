@@ -89,13 +89,13 @@ const ProjectsSection = () => (
               }}
               className="border border-border rounded-lg bg-card overflow-hidden group hover:border-primary/40 focus-within:border-primary/40 focus-visible:border-primary/40 hover:shadow-[0_0_25px_hsl(var(--primary)/0.12)] focus-within:shadow-[0_0_25px_hsl(var(--primary)/0.12)] focus-visible:shadow-[0_0_25px_hsl(var(--primary)/0.12)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 transition-all duration-300"
             >
-              {/* 16:9 preview image */}
-              <div className="relative aspect-video overflow-hidden border-b border-border group-hover:border-primary/40 transition-colors duration-300">
+              {/* Compact preview thumbnail */}
+              <div className="relative h-36 overflow-hidden border-b border-border group-hover:border-primary/40 transition-colors duration-300">
                 <img
                   src={proj.image}
                   alt={`${proj.title} preview`}
                   loading="lazy"
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent pointer-events-none" />
               </div>
