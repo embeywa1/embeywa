@@ -1,14 +1,16 @@
 import { motion } from "framer-motion";
 import { ExternalLink, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import ciphervaultPreview from "@/assets/ciphervault-preview.jpg";
+import netsentinelPreview from "@/assets/netsentinel-preview.jpg";
+import attendxPreview from "@/assets/attendx-preview.jpg";
 
 type Project = {
   title: string;
   subtitle?: string;
   status?: string;
-  vision: string;
-  build: string;
-  impact: string;
+  description: string;
+  image: string;
   tech: string[];
   codeUrl?: string;
   demoUrl?: string;
@@ -19,26 +21,20 @@ const projects: Project[] = [
     title: "AttendX",
     subtitle: "Role-Based Academic Attendance & Telemetry Platform",
     status: "Live App",
-    vision:
-      "Replaces paper roll calls and fragmented spreadsheets with synchronized real-time attendance telemetry, self-service course enrollment, and transparent student tracking.",
-    build:
-      "Built on React (Vite) and Supabase (PostgreSQL). Features custom PL/pgSQL functions (is_faculty()), strict Row-Level Security (RLS) policies, automated signup triggers (on_auth_user_created), dynamic batch-upsert roster matrices, and modular service abstractions (classApi, attendanceApi).",
-    impact:
-      "Streamlines faculty session workflows, provides real-time attendance rate tracking for students, and enforces strict multi-tenant data privacy at the database layer.",
+    description:
+      "A modern full-stack academic attendance management platform engineered with fine-grained role-based dashboards. Integrates Supabase authentication and strict PostgreSQL row-level security (RLS) policies to automate attendance tracking, dispute workflows, and administrative reporting.",
+    image: attendxPreview,
     tech: ["React (Vite)", "Supabase", "PostgreSQL", "Tailwind CSS", "Row Level Security", "Shadcn UI"],
     codeUrl: "https://github.com/embeywa1/webattendx",
-    demoUrl: "https://webattendx.lovable.app",
+    demoUrl: "https://webattendx.lovable.app/",
   },
   {
     title: "NetSentinel",
     subtitle: "Real-Time Network Security & Incident Investigation Interface",
     status: "Live App",
-    vision:
-      "Designed and built NetSentinel as a centralized dashboard to demonstrate real-time network defense concepts, threat analysis, and security event visualization. Built as a direct application of modern frontend architecture applied to high-tech cyber defense tools.",
-    build:
-      "Engineered using modular HTML5, custom CSS3, and modern JavaScript, leveraging high-contrast terminal styling, interactive metrics displays, and a fully responsive layout across all devices.",
-    impact:
-      "Delivers an intuitive interface for monitoring security events and demonstrating modern SOC dashboard workflows, boosting engagement by an estimated 25%.",
+    description:
+      "An interactive cyber threat intelligence dashboard that aggregates real-time IP reputation telemetry and geospatial risk mapping. Integrates directly with the AbuseIPDB API to parse attack confidence scores, ISP data, and country origins for rapid security incident triage.",
+    image: netsentinelPreview,
     tech: ["HTML5", "CSS3", "JavaScript", "Cybersecurity", "Network Defense"],
     codeUrl: "https://github.com/embeywa1/netsentinel",
     demoUrl: "https://netsentinelbyembeywa.netlify.app/",
@@ -47,15 +43,12 @@ const projects: Project[] = [
     title: "CIPHERVAULT",
     subtitle: "High-Entropy Cryptographic Password & Security Utility",
     status: "Live App",
-    vision:
-      "Designed and built a high-performance, client-side security application to demonstrate cryptographically secure randomness, real-time entropy calculation, and zero-knowledge privacy architecture.",
-    build:
-      "Engineered with React, Tailwind CSS, and Lucide icons. Integrated the native Web Crypto API (window.crypto.getRandomValues) for CSPRNG security, pairing interactive dual-range length controls and custom character set toggles with a live bit-rate entropy meter.",
-    impact:
-      "Delivers a zero-network-exposure security utility that generates uncrackable credentials locally in the browser runtime, enforcing zero-trust client-side data privacy.",
+    description:
+      "A zero-knowledge cryptographic web application engineered to generate high-entropy passwords and custom passphrases entirely within the browser client. Built using native browser APIs, it eliminates network exposure and modulo bias while calculating real-time bit-rate entropy to ensure maximum credential security.",
+    image: ciphervaultPreview,
     tech: ["React", "Tailwind CSS", "JavaScript", "Web Crypto API", "Cybersecurity", "CSPRNG"],
     codeUrl: "https://github.com/embeywa1/ciphervaultbyembeywa",
-    demoUrl: "https://ciphervaultbyembeywa.lovable.app",
+    demoUrl: "https://ciphervaultbyembeywa.vercel.app",
   },
 ];
 
@@ -96,6 +89,17 @@ const ProjectsSection = () => (
               }}
               className="border border-border rounded-lg bg-card overflow-hidden group hover:border-primary/40 focus-within:border-primary/40 focus-visible:border-primary/40 hover:shadow-[0_0_25px_hsl(var(--primary)/0.12)] focus-within:shadow-[0_0_25px_hsl(var(--primary)/0.12)] focus-visible:shadow-[0_0_25px_hsl(var(--primary)/0.12)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 transition-all duration-300"
             >
+              {/* 16:9 preview image */}
+              <div className="relative aspect-video overflow-hidden border-b border-border group-hover:border-primary/40 transition-colors duration-300">
+                <img
+                  src={proj.image}
+                  alt={`${proj.title} preview`}
+                  loading="lazy"
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent pointer-events-none" />
+              </div>
+
               {/* Terminal header */}
               <div className="flex items-center gap-2 px-4 py-2 border-b border-border bg-muted/30">
                 <div className="w-2.5 h-2.5 rounded-full bg-destructive/60" />
@@ -118,20 +122,7 @@ const ProjectsSection = () => (
                   )}
                 </div>
 
-                <div className="space-y-3 text-sm text-muted-foreground">
-                  <div>
-                    <span className="text-primary text-xs uppercase tracking-wider">The Vision</span>
-                    <p className="mt-1">{proj.vision}</p>
-                  </div>
-                  <div>
-                    <span className="text-secondary text-xs uppercase tracking-wider">The Build</span>
-                    <p className="mt-1">{proj.build}</p>
-                  </div>
-                  <div>
-                    <span className="text-primary text-xs uppercase tracking-wider">The Impact</span>
-                    <p className="mt-1">{proj.impact}</p>
-                  </div>
-                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed">{proj.description}</p>
 
                 <div className="flex flex-wrap gap-2">
                   {proj.tech.map((t) => (
